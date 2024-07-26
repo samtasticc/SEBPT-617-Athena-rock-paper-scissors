@@ -30,12 +30,23 @@ const getComputerChoice = () => {
     console.log(computerChoice, 'computerChoice')
 }
 // compare player/comp choices - check for a winner
-    // if/else comparison to all choices
-        // rock beats scissors
-        // scissors beats paper
-        // paper beats rock
-        // same option - its a tie
-
+const compare = () => {
+    if (playerChoice === computerChoice) {
+      msg = 'You tied!';
+    } else if (playerChoice === choices[0] && computerChoice === choices[2]) { 
+      // "rock" vs. "scissors"
+      msg = 'Congrats! You win!';
+    } else if (playerChoice === choices[1] && computerChoice === choices[0]) { 
+      // "paper" vs. "rock"
+      msg = 'Congrats! You win!';
+    } else if (playerChoice === choices[2] && computerChoice === choices[1]) { 
+      // "scissors" vs. "paper"
+      msg = 'Congrats! You win!';
+    } else {
+      msg = 'You lose! Try again?';
+    }
+  };
+  
 // render a win/lose/tie message to the player
     // including player and comp choices in the message
     // clearly indicating who won/result
