@@ -33,3 +33,11 @@ const resultDisplayEl = document.querySelector ('#result-display')
 
 /*----------- Event Listeners -----------*/
 // 5) handle a player clicking a button
+document.querySelector('#rock').addEventListener('click', play)
+document.querySelector('#paper').addEventListener('click', play)
+document.querySelector('#scissor').addEventListener('click', play)
+
+// ! alt way to add event listeners to all buttons
+// document.querySelectorAll('button').forEach(function (button) {
+//     button.addEventListener('click', play);
+//   });  
